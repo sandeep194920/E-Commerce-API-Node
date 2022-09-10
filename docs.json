@@ -1,0 +1,482 @@
+{
+  "info": {
+    "_postman_id": "731c7434-49b5-45c2-8930-6a2aa6e93902",
+    "name": "07-E-Commerce-API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "21911553"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"monu\",\n    \"email\":\"monu@gmail.com\",\n    \"password\":\"1234\"\n\n} ",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/auth/register",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["auth", "register"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\":\"sandeep@gmail.com\",\n    \"password\":\"1234\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/auth/login",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["auth", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logout User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/auth/logout",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["auth", "logout"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Get All Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/users/",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["users", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Single User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/users/63044830c70600e17b5ac3f3",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["users", "63044830c70600e17b5ac3f3"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"TSandeep\",\n    \"email\":\"sandeep@gmail.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/users/updateUser",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["users", "updateUser"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User Password",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"oldPassword\":\"123456\",\n    \"newPassword\":\"12345\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/users/updateUserPassword",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["users", "updateUserPassword"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Show Current User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/users/showMe",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["users", "showMe"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Product",
+      "item": [
+        {
+          "name": "Get All Products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/products",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["products"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Product",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"accent chair\",\n    \"price\": 25999,\n    \n    \"colors\": [\"#ff0000\", \"#00ff00\", \"#0000ff\"],\n    \"company\": \"marcos\",\n    \"description\": \"Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge\",\n    \"category\": \"office\"\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/products",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["products"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Single Product",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/products/63135a10a682550e6be9c186",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["products", "63135a10a682550e6be9c186"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Product",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/products/631297b84b76a88be3048706",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["products", "631297b84b76a88be3048706"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Product",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"accent chair\",\n    \"price\": 25999,\n    \n    \"colors\": [\"#ff0000\", \"#00ff00\", \"#0000ff\"],\n    \"company\": \"marcos\",\n    \"description\": \"Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge\",\n    \"category\": \"office\"\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/products/631297b84b76a88be3048706",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["products", "631297b84b76a88be3048706"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Upload Image",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/products/uploadImage",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["products", "uploadImage"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Single Product Reviews",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/products/63156f49d6daad5d68142a3b/reviews",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["products", "63156f49d6daad5d68142a3b", "reviews"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Review",
+      "item": [
+        {
+          "name": "Get All Reviews",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/reviews",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["reviews"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Review",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"product\":\"63135a10a682550e6be9c186\",\n    \"title\":\"Susan's Review\",\n    \"comment\":\"This is an awesome product\",\n    \"rating\":4\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/reviews",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["reviews"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Single Review",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/reviews/6313f5671595df21afc05866",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["reviews", "6313f5671595df21afc05866"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Review",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/reviews/63140187b78b645e9ff0c83c",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["reviews", "63140187b78b645e9ff0c83c"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Review",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\":\"Sandeep's Review again\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/reviews/6314ab80b78b645e9ff0c851",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["reviews", "6314ab80b78b645e9ff0c851"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Order",
+      "item": [
+        {
+          "name": "Get All Orders (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/orders",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["orders"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Order (Auth Required)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/orders",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["orders"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Current User's Orders (Auth required)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/orders/showAllMyOrders",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["orders", "showAllMyOrders"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Order (Auth Required)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/orders/1",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["orders", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Single Order (Auth required)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://e-commerce-api-node-project.herokuapp.com/api/v1/orders/1",
+              "host": [
+                "https://e-commerce-api-node-project.herokuapp.com/api/v1"
+              ],
+              "path": ["orders", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
